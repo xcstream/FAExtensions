@@ -7,7 +7,7 @@ usage:
 
 view.onClick({()->Void in
 
-  println("first view clicked")
+    println("ouch")
   
 })
         
