@@ -13,6 +13,7 @@
 		EF739D8B1A0164C10008199D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF739D8A1A0164C10008199D /* Images.xcassets */; };
 		EF739D8E1A0164C10008199D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF739D8C1A0164C10008199D /* LaunchScreen.xib */; };
 		EF739D9A1A0164C10008199D /* FAExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF739D991A0164C10008199D /* FAExtensionsTests.swift */; };
+		EF739DA61A0167AE0008199D /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF739DA51A0167AE0008199D /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		EF739D931A0164C10008199D /* FAExtensionsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FAExtensionsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF739D981A0164C10008199D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF739D991A0164C10008199D /* FAExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAExtensionsTests.swift; sourceTree = "<group>"; };
+		EF739DA51A0167AE0008199D /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		EF739D801A0164C10008199D /* FAExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				EF739DA51A0167AE0008199D /* UIViewExtensions.swift */,
 				EF739D831A0164C10008199D /* AppDelegate.swift */,
 				EF739D851A0164C10008199D /* ViewController.swift */,
 				EF739D871A0164C10008199D /* Main.storyboard */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF739D861A0164C10008199D /* ViewController.swift in Sources */,
+				EF739DA61A0167AE0008199D /* UIViewExtensions.swift in Sources */,
 				EF739D841A0164C10008199D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

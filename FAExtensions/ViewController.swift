@@ -8,18 +8,32 @@
 
 import UIKit
 
-class ViewController: UIViewController {
 
+
+class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        var v = UIView()
+        v.frame = CGRectMake(100,20,100,100)
+        view.addSubview(v)
+        v.backgroundColor = UIColor.blackColor()
+        v.onClick({()->Void in
+            println("first view clicked")
+        })
+        var v2 = UIView()
+        v2.frame = CGRectMake(100,200,100,100)
+        view.addSubview(v2)
+        v2.backgroundColor = UIColor.greenColor()
+        v2.onClick({()->Void in
+            println("second view clicked")
+        })
+        
+        
+        var v3 = UIView()
+        
+        
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
+
 
