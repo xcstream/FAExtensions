@@ -14,18 +14,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         var v = UIView()
-        v.frame = CGRectMake(100,20,100,100)
+        v.frame = CGRectMake(100,70,100,100)
         view.addSubview(v)
         v.backgroundColor = UIColor.blackColor()
         v.onClick({()->Void in
-            println("first view clicked")
+            println("view1 clicked")
         })
         var v2 = UIView()
         v2.frame = CGRectMake(100,200,100,100)
         view.addSubview(v2)
         v2.backgroundColor = UIColor.greenColor()
         v2.onClick({()->Void in
-            println("second view clicked")
+            println("view2 clicked")
         })
         
         
