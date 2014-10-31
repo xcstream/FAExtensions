@@ -27,10 +27,8 @@ class ViewController: UIViewController {
         v2.onClick({()->Void in
             println("view2 clicked")
         })
-        
-        
+
         var v3 = UIView()
-        
         
         
     }
