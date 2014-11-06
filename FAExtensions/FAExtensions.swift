@@ -9,6 +9,7 @@ let associated:NSMutableDictionary  = NSMutableDictionary()
 class blockholder{
     var dragEnabled = false;
     var onclickblock: ()->() = {}
+    var onTouchDownBlock: ()->() = {}
     init(){
     }
 }
@@ -43,11 +44,38 @@ extension UIView{
             associated[self.hash] = bh
         }
     }
+    
+    
+    var onTouchDownBlock: ()->(){
+        get {
+            var bh:blockholder? = associated[self.hash] as blockholder?
+            if(bh != nil){
+                return bh!.onTouchDownBlock
+            }
+            return {}
+        }
+        set(newValue) {
+            var bh  = blockholder();
+            bh.onTouchDownBlock = newValue
+            associated[self.hash] = bh
+        }
+    }
+    
+    
+    
+    
+    
     func onClick(block:()->()){
         onclickblock = block
         var tap = UITapGestureRecognizer(target: self, action:Selector("clicked"))
         self.addGestureRecognizer(tap)
     }
+    
+    func onTouchDown(block:()->()){
+        onTouchDownBlock = block;
+        
+    }
+    
     func onMessage(message:NSString,block:()->()){
         onclickblock = block
         var tap = UITapGestureRecognizer(target: self, action:Selector("clicked"))
@@ -63,9 +91,12 @@ extension UIView{
             
             
         }
+        if(onTouchDownBlock != nil){
+            onTouchDownBlock()
+        }
     }
     public override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-        
+       
     }
     
     func rotateDegree (degree:Float ,duration:NSTimeInterval ){
