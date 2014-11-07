@@ -4,14 +4,11 @@
 //
 //  Created by xcstream on 10/30/14.
 //  Copyright (c) 2014 xcstream. All rights reserved.
-//
-
 import UIKit
 
 
-
 class ViewController: UIViewController {
-    override func viewDidLoad() {
+    override func viewDidLoad() {  
         super.viewDidLoad()
         var v = UIView()
         v.frame = CGRectMake(100,70,100,100)
@@ -27,11 +24,7 @@ class ViewController: UIViewController {
         v2.onClick({()->Void in
             println("view2 clicked")
         })
-
         var v3 = UIView()
-        
-        
     }
+    
 }
-
-

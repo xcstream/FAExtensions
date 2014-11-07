@@ -73,7 +73,6 @@ extension UIView{
     
     func onTouchDown(block:()->()){
         onTouchDownBlock = block;
-        
     }
     
     func onMessage(message:NSString,block:()->()){
@@ -82,24 +81,28 @@ extension UIView{
         self.addGestureRecognizer(tap)
     }
     
-    
     func clicked(){
         onclickblock()
     }
+    
     public override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         if(self.dragEnabled){
-            
-            
         }
         if(onTouchDownBlock != nil){
             onTouchDownBlock()
         }
     }
     public override func touchesEnded(touches: NSSet, withEvent event: UIEvent) {
-       
+    
+    }
+    func rotateDegree (degree:Float ,duration:NSTimeInterval ){
+        var a = [2,"3",4]
+        a[1] = 2
+    }
+  
+    func clean(){
+        onTouchDownBlock = {};
+        onclickblock = {};
     }
     
-    func rotateDegree (degree:Float ,duration:NSTimeInterval ){
-        
-    }
 }
