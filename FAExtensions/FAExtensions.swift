@@ -96,8 +96,10 @@ extension UIView{
     
     }
     func rotateDegree (degree:Float ,duration:NSTimeInterval ){
-        var a = [2,"3",4]
-        a[1] = 2
+        UIView.animateWithDuration(duration, animations: { () -> Void in
+            self.transform =  CATransform3DMakeRotation(1.57, 1, 1, 0);
+        })
+  
     }
   
     func clean(){
